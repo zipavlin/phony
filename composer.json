@@ -1,0 +1,21 @@
+{
+    "name": "zipavlin/phony",
+    "description": "A helper class for parsing, normalizing and displaying Slovene phone numbers",
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Žiga Pavlin",
+            "email": "ziga.pavle@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zipavlin\\": "src/"
+        }
+    }
+}
