@@ -39,7 +39,7 @@ class Phony
      * @return string|string[]|null
      */
     private function normalize() {
-        if (!$this->raw) return new \Exception("Input not set. Did you ran 'from' method?");
+        if (!$this->raw) return;
         return $this->normalized ?? $this->normalized = ltrim(preg_replace_callback("/^(?:(?:(?:\+386|00386|386)\s*(?:\(0\))?(\d{1,2})\s*([\d ]{7,}))|(?:(\d{2,3})(?:[\s\/])([\d -]+)))$/", function ($matches) {
             if (!$this->blank($matches[1]) and !$this->blank($matches[2])) {
                 return '0'.$matches[1].trim(str_replace([' ', '-'], '', $matches[2]));
